@@ -1,5 +1,5 @@
 const http = require('http');
-
+const method = req.method
 const server = http.createServer((req, res) => {
 const url = req.url;
 
@@ -14,7 +14,8 @@ res.write('</form></body>');
 res.write('</html>');
 return res.end();
 }
-//TODO DO nothing again
+
+if (url === '/message' && method === "POST") again
 console.log(req.url, req.method, req.headers);
 
 res.setHeader('Content-Type', 'text/html');
