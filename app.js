@@ -1,5 +1,5 @@
 const http = require('http');
-
+const method = req.method
 const server = http.createServer((req, res) => {
 const url = req.url;
 
@@ -15,7 +15,7 @@ res.write('</html>');
 return res.end();
 }
 
-console.log(req.url, req.method, req.headers);
+if (url === '/message' && method === "POST")
 
 res.setHeader('Content-Type', 'text/html');
 res.write('<html>');
