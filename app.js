@@ -16,6 +16,8 @@ return res.end();
 }
 
 if (url === '/message' && method === "POST")
+//TODO DO nothing
+console.log(req.url, req.method, req.headers);
 
 res.setHeader('Content-Type', 'text/html');
 res.write('<html>');
